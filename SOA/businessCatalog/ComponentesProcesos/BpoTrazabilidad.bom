@@ -1,0 +1,73 @@
+//Content Format Version: 1.0
+
+//########################################################################################
+//####                                                                                ####
+//####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####
+//#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####
+//####                                                                                ####
+//########################################################################################
+package oracle.scripting.catalog.componentesProcesos;
+
+import oracle.scripting.xml.pe.gob.senasa.ws.general.type.Trazabilidad;
+import java.lang.Exception;
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/BpoTrazabilidad", 
+			name = "BpoTrazabilidad", 
+			location = "/businessCatalog/ComponentesProcesos/BpoTrazabilidad.xsd", 
+			module = "ComponentesProcesos") 
+public class BpoTrazabilidad{
+
+BpoTrazabilidad()
+{
+	
+}
+
+
+public void mtdInsertarTrazabilidad(java.lang.String argAccion, 
+			java.lang.String argCanal, 
+			java.lang.String argDescripcionAsunto, 
+			java.lang.String argDestAreaEntidad, 
+			java.lang.String argDestPersona, 
+			java.lang.String argEstado, 
+			java.lang.String argExpedienteDefinitivo, 
+			java.lang.String argExpedienteTemp, 
+			java.lang.String argNotas, 
+			java.lang.String argProceso, 
+			java.lang.String argRemitAreaEntidad, 
+			java.lang.String argRemitPersona)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeneralWSPortWSDL.GeneralService cannot be migrated.
+	 */
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI ===== INICIO REG. TRAZA ======= ', ScriptLogger.LogLevel.INFO)
+	try {
+		Trazabilidad trazabilidad = new Trazabilidad()
+		trazabilidad.accion = argAccion
+		trazabilidad.canal = argCanal
+		trazabilidad.descripcionAsunto = argDescripcionAsunto
+		trazabilidad.destinatarioAreaEntidad = argDestAreaEntidad
+		trazabilidad.destinatarioPersona = argDestPersona
+		trazabilidad.estado = argEstado
+		trazabilidad.expedienteDefinitivo = argExpedienteDefinitivo
+		trazabilidad.expedienteTemp = argExpedienteTemp
+		trazabilidad.fechaHora = com.oracle.scripting.lib.xml.datatype.XmlCalendar.now()
+		trazabilidad.notas = argNotas
+		trazabilidad.proceso = argProceso
+		trazabilidad.remitenteAreaEntidad = argRemitAreaEntidad
+		trazabilidad.remitentePersona = argRemitPersona
+		GeneralService.insertarTrazabilidad(trazabilidad)
+	}
+	catch (Exception e) {
+		// WARNING: 'message' method is deprecated.
+		log.message('PFI - ERROR en mtdInsertarTrazabilidad:' + e.message, ScriptLogger.LogLevel.INFO)
+	}
+	
+	
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI ===== FIN REG. TRAZA ======= ', ScriptLogger.LogLevel.INFO)
+}
+
+
+}

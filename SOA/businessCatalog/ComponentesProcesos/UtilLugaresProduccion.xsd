@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="12.1.3" build="00.00" fullName="ComponentesProcesos.UtilLugaresProduccion" modifiers="[public]"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/UtilLugaresProduccion" elementFormDefault="qualified" xmlns="http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/UtilLugaresProduccion"  xmlns:ns1="http://www.oracle.com/bpm/invalidTypes"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="UtilLugaresProduccionType">
+        <xs:sequence>
+            <xs:element name="area" nillable="true" type="xs:decimal"/>
+            <xs:element name="busquedaDistrito" nillable="true" type="ns1:missingType"/>
+            <xs:element name="busquedaProvincia" nillable="true" type="ns1:missingType"/>
+            <xs:element name="departamento" nillable="true" type="xs:string"/>
+            <xs:element name="direccion" nillable="true" type="xs:string"/>
+            <xs:element name="distrito" nillable="true" type="xs:string"/>
+            <xs:element name="nombre" nillable="true" type="xs:string"/>
+            <xs:element name="provincia" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="UtilLugaresProduccion" type="UtilLugaresProduccionType"/>
+</xs:schema>

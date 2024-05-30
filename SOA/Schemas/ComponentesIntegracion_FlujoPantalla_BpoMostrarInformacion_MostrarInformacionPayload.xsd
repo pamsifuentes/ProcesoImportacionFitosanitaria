@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<schema targetNamespace="http://xmlns.oracle.com/bpel/workflow/task" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://xmlns.oracle.com/bpel/workflow/task" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <element name="HumanTaskPayload" type="tns:ComponentesIntegracion_FlujoPantalla_BpoMostrarInformacion_MostrarInformacionPayloadType"><annotation><appinfo><globalElement xmlns="http://www.frevvo.com/appinfo">true</globalElement></appinfo></annotation></element><complexType name="ComponentesIntegracion_FlujoPantalla_BpoMostrarInformacion_MostrarInformacionPayloadType">
+      <sequence><element name="titulo" type="xsd:string"/><element name="direccionEjecutiva" type="xsd:string"/><element name="servicio" type="xsd:string"/><element name="solicitante" type="xsd:string"/><element name="expediente" type="xsd:string"/></sequence>
+   </complexType>
+</schema>

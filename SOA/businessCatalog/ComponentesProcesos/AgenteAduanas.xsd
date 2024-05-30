@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="12.1.3" build="00.00" fullName="ComponentesProcesos.AgenteAduanas" modifiers="[public]"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/AgenteAduanas" elementFormDefault="qualified" xmlns="http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/AgenteAduanas"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="AgenteAduanasType">
+        <xs:sequence>
+            <xs:element name="departamento" nillable="true" type="xs:string"/>
+            <xs:element name="distrito" nillable="true" type="xs:string"/>
+            <xs:element name="dniRepresentantelegal" nillable="true" type="xs:string"/>
+            <xs:element name="domicilioLegal" nillable="true" type="xs:string"/>
+            <xs:element name="email" nillable="true" type="xs:string"/>
+            <xs:element name="fax" nillable="true" type="xs:string"/>
+            <xs:element name="nombreRazonSocial" nillable="true" type="xs:string"/>
+            <xs:element name="nombreRepresentanteLegal" nillable="true" type="xs:string"/>
+            <xs:element name="provincia" nillable="true" type="xs:string"/>
+            <xs:element name="ruc" nillable="true" type="xs:string"/>
+            <xs:element name="telefono" nillable="true" type="xs:string"/>
+            <xs:element name="urbanizacion" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="AgenteAduanas" type="AgenteAduanasType"/>
+</xs:schema>

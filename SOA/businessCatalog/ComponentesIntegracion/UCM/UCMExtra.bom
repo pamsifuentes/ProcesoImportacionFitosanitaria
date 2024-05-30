@@ -1,0 +1,49 @@
+//Content Format Version: 1.0
+
+//########################################################################################
+//####                                                                                ####
+//####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####
+//#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####
+//####                                                                                ####
+//########################################################################################
+package oracle.scripting.catalog.componentesIntegracion.ucm;
+
+import oracle.scripting.xml.com.stellent.extra.type.STDGetTitleResult;
+import java.lang.String;
+import com.oracle.scripting.lib.xml.datatype.XmlCalendar;
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/UCM/UCMExtra", 
+			name = "UCMExtra", 
+			location = "/businessCatalog/ComponentesIntegracion/UCM/UCMExtra.xsd", 
+			module = "ComponentesIntegracion.UCM") 
+public class UCMExtra{
+
+UCMExtra()
+{
+	
+}
+
+
+public void generarTitulo(java.lang.String subtipo)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.UCM.Extra.ExtraService cannot be migrated.
+	 */
+	STDGetTitleResult retorna
+	ExtraService titulo
+	titulo = ExtraService.ExtraService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.UCM.Extra.ExtraService.stdGetTitle(in year : String, in pCodSubTipo : String, in pCodArea : String, in extraProps : ComponentesIntegracion.UCM.Extra.IdcPropertyList, out stdGetTitleResult : ComponentesIntegracion.UCM.Extra.STDGetTitleResult) has the following out arguments [stdGetTitleResult].
+	 * Out arguments semantics was not migrated.
+	 */
+	/*
+	 * @NoMig: Field Fuego.Lang.Time.year cannot be migrated.
+	 * Comments:
+	 * Comments .
+	 */
+	titulo.stdGetTitle((String) XmlCalendar.year, subtipo, '', null, retorna)
+}
+
+
+}

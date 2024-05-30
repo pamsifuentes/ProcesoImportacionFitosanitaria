@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<measurements xmlns="http://xmlns.oracle.com/bpm/analytics/measurementV20">
+    <compositeDN>ProcesoImportacionFitosanitaria</compositeDN>
+    <measurementElements>
+        <measurementElement name="Composite_Measurement" type="COMPOSITE" enabled="true" userDefined="false">
+            <elementSelection>
+                <specificSelection>INTERACTIVE</specificSelection>
+            </elementSelection>
+            <elementStates>
+                <allList>ALL</allList>
+            </elementStates>
+            <businessIndicators allDimensions="true" allMeasures="true" allAttributes="true"/>
+        </measurementElement>
+    </measurementElements>
+</measurements>

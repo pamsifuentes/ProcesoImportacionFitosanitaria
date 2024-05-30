@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="12.1.3" build="00.00" fullName="ComponentesProcesos.ImportacionFitosanitariaAnexos" modifiers="[public]"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/ImportacionFitosanitariaAnexos" elementFormDefault="qualified" xmlns="http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/ImportacionFitosanitariaAnexos"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="ImportacionFitosanitariaAnexosType">
+        <xs:sequence>
+            <xs:element name="cantidad" nillable="true" type="xs:double"/>
+            <xs:element name="cantidadPlantasPadre" nillable="true" type="xs:double"/>
+            <xs:element name="checkDetalles" nillable="true" type="xs:boolean"/>
+            <xs:element name="checkEliminar" nillable="true" type="xs:boolean"/>
+            <xs:element name="checkModificar" nillable="true" type="xs:boolean"/>
+            <xs:element name="codigo" nillable="true" type="xs:string"/>
+            <xs:element name="codigoPadre" nillable="true" type="xs:string"/>
+            <xs:element name="descPaisProcedencia" nillable="true" type="xs:string"/>
+            <xs:element name="descTipoEnvase" nillable="true" type="xs:string"/>
+            <xs:element name="descUnidadMedida" nillable="true" type="xs:string"/>
+            <xs:element name="descUsoDestino" nillable="true" type="xs:string"/>
+            <xs:element name="descripcion" nillable="true" type="xs:string"/>
+            <xs:element name="descripcionPadre" nillable="true" type="xs:string"/>
+            <xs:element name="nombreCientifico" nillable="true" type="xs:string"/>
+            <xs:element name="nombreCientificoPadre" nillable="true" type="xs:string"/>
+            <xs:element name="paisProcedencia" nillable="true" type="xs:string"/>
+            <xs:element name="partidaArancelaria" nillable="true" type="xs:string"/>
+            <xs:element name="partidaArancelariaPadre" nillable="true" type="xs:string"/>
+            <xs:element name="pesoNeto" nillable="true" type="xs:double"/>
+            <xs:element name="tipoEnvase" nillable="true" type="xs:string"/>
+            <xs:element name="unidadMedida" nillable="true" type="xs:string"/>
+            <xs:element name="usoDestino" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ImportacionFitosanitariaAnexos" type="ImportacionFitosanitariaAnexosType"/>
+</xs:schema>

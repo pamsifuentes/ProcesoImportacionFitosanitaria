@@ -1,0 +1,25 @@
+//Content Format Version: 1.0
+
+//########################################################################################
+//####                                                                                ####
+//####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####
+//#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####
+//####                                                                                ####
+//########################################################################################
+package oracle.scripting.catalog.componentesIntegracion.bean;
+
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoConceptoPago", 
+			name = "BpoConceptoPago", 
+			location = "/businessCatalog/ComponentesIntegracion/Bean/BpoConceptoPago.xsd", 
+			module = "ComponentesIntegracion.Bean") 
+public class BpoConceptoPago{
+
+BpoConceptoPago()
+{
+	
+}
+
+
+}

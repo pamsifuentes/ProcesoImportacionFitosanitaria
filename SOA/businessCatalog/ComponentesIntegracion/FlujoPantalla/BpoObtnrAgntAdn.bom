@@ -1,0 +1,181 @@
+//Content Format Version: 1.0
+
+//########################################################################################
+//####                                                                                ####
+//####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####
+//#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####
+//####                                                                                ####
+//########################################################################################
+package oracle.scripting.catalog.componentesIntegracion.flujoPantalla;
+
+import java.lang.Exception;
+import oracle.scripting.xml.pe.gob.senasa.ws.aduanas.type.AgenteAduanas;
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/FlujoPantalla/BpoObtnrAgntAdn", 
+			name = "BpoObtnrAgntAdn", 
+			location = "/businessCatalog/ComponentesIntegracion/FlujoPantalla/BpoObtnrAgntAdn.xsd", 
+			module = "ComponentesIntegracion.FlujoPantalla") 
+public class BpoObtnrAgntAdn{
+
+BpoObtnrAgntAdn()
+{
+	
+}
+
+
+public void idImportadorValidValues()
+{
+	return this.lstImportadores
+}
+
+
+public void idPaisValidValues()
+{
+	return this.lstPais
+}
+
+
+public void mtdBurcarImportadores()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.SolicitantePortWSDL.SolicitanteService cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.SolicitantePortWSDL.Importador[] cannot be migrated.
+	 */
+	this.errorPantalla = ''
+	try {
+		SolicitanteService vServicio
+		vServicio = SolicitanteService.SolicitanteService()
+		 vImportadores
+		/*
+		 * @NoMig: The method ComponentesIntegracion.WebServices.SolicitantePortWSDL.SolicitanteService.obtenerImportadoresXPais(in arg0 : String, out return : ComponentesIntegracion.WebServices.SolicitantePortWSDL.Importador[]) has the following out arguments [return].
+		 * Out arguments semantics was not migrated.
+		 */
+		vServicio.obtenerImportadoresXPais(this.idPais, vImportadores)
+		this.lstImportadores.clear()
+		this.arrayImportadores = new HashMap()
+		for ( def vImportador in vImportadores) {
+			this.arrayImportadores.put(vImportador.codigo, vImportador)
+			this.lstImportadores[vImportador.codigo] = vImportador.nombre
+		}
+		
+		if (this.lstImportadores.size() == 0) {
+			this.lstImportadores[''] = ''
+			
+			// this.errorPantalla="No existen importadores para el pais seleccionado.";
+		}
+	}
+	catch (Exception e) {
+		// WARNING: 'message' method is deprecated.
+		log.message('DV - ERROR mtdBuscarImpotadores:' + e.message, ScriptLogger.LogLevel.INFO)
+		this.errorPantalla = 'Error inesperado por favor comuniquese con el administrador de sistema.'
+	}
+	
+}
+
+
+public void mtdBuscarAgente()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.AgenteAduanasPortWSDL.AgenteAduanasService cannot be migrated.
+	 */
+	this.errorPantalla = ''
+	try {
+		AgenteAduanasService vServicio
+		vServicio = AgenteAduanasService.AgenteAduanasService()
+		AgenteAduanas vAgenteAduana
+		/*
+		 * @NoMig: The method ComponentesIntegracion.WebServices.AgenteAduanasPortWSDL.AgenteAduanasService.obtenerAgenteAduanas(in arg0 : String, out return : ComponentesIntegracion.WebServices.AgenteAduanasPortWSDL.AgenteAduanas) has the following out arguments [return].
+		 * Out arguments semantics was not migrated.
+		 */
+		vServicio.obtenerAgenteAduanas(this.ruc, vAgenteAduana)
+		this.mtdLimpiarDatos()
+		// WARNING: 'message' method is deprecated.
+		log.message('DV - vAgenteAduana:' + vAgenteAduana, ScriptLogger.LogLevel.INFO)
+		
+		if (vAgenteAduana != null && vAgenteAduana.dniRuc != '') {
+			this.idAgenteAduana = vAgenteAduana.idPersona
+			this.ruc = vAgenteAduana.dniRuc
+			this.correoElectronico = vAgenteAduana.email
+			this.departamento = vAgenteAduana.departamento
+			this.distrito = vAgenteAduana.distrito
+			this.dniRepresentanteLegal = vAgenteAduana.dniRepresentanteLegal
+			this.domicilioLegal = vAgenteAduana.domicilioLegal
+			this.nombreRepresentanteLegal = vAgenteAduana.nombreRepresentanteLegal
+			this.provincia = vAgenteAduana.provincia
+			this.razonSocialNombre = vAgenteAduana.nombreRazonSocial
+			this.telefono = vAgenteAduana.telefono
+			this.telefonoMovil = vAgenteAduana.telefonoMovil
+		}
+		
+		
+		if (this.idAgenteAduana == null || this.idAgenteAduana == '') {
+			this.errorPantalla = 'El agente aduana que busca no existe en el sistema por favor ingreselo por el modulo de mantenimiento.'
+		}
+		
+		// WARNING: 'message' method is deprecated.
+		log.message('DV - this.idAgenteAduana:' + this.idAgenteAduana, ScriptLogger.LogLevel.INFO)
+		// WARNING: 'message' method is deprecated.
+		log.message('DV - this.errorPantalla:' + this.errorPantalla, ScriptLogger.LogLevel.INFO)
+	}
+	catch (Exception e) {
+		this.errorPantalla = 'Error inesperado por favor comuniquese con el administrador de sistema.'
+		// WARNING: 'message' method is deprecated.
+		log.message('DV - ERROR:' + e.message, ScriptLogger.LogLevel.INFO)
+	}
+	
+}
+
+
+public void mtdLimpiarDatos()
+{
+	// this.ruc            = "";
+	this.idAgenteAduana = ''
+	this.correoElectronico = ''
+	this.razonSocialNombre = ''
+	this.idAgenteAduana = ''
+	this.nombreRepresentanteLegal = ''
+	this.dniRepresentanteLegal = ''
+	this.departamento = ''
+	this.provincia = ''
+	this.distrito = ''
+	this.domicilioLegal = ''
+	this.telefono = ''
+	this.telefonoMovil = ''
+	this.correoElectronico = ''
+}
+
+
+public void mtdListarPaises()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.Pais[] cannot be migrated.
+	 */
+	try {
+		GeografiaService vServicio
+		vServicio = GeografiaService.GeografiaService()
+		 vPaises = null
+		/*
+		 * @NoMig: The method ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService.obtenerPais(out return : ComponentesIntegracion.WebServices.GeografiaPortWSDL.Pais[]) has the following out arguments [return].
+		 * Out arguments semantics was not migrated.
+		 */
+		vServicio.obtenerPais(vPaises)
+		
+		if (vPaises != null) {
+			for ( def vPais in vPaises) {
+				this.lstPais[vPais.codPais] = vPais.pais
+			}
+		}
+	}
+	catch (Exception e) {
+		// WARNING: 'message' method is deprecated.
+		log.message('DV - ERROR mtdListarPaises:' + e.message, ScriptLogger.LogLevel.INFO)
+	}
+	
+}
+
+
+}

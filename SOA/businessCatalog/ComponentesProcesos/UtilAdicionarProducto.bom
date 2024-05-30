@@ -1,0 +1,280 @@
+//Content Format Version: 1.0
+
+//########################################################################################
+//####                                                                                ####
+//####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####
+//#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####
+//####                                                                                ####
+//########################################################################################
+package oracle.scripting.catalog.componentesProcesos;
+
+import java.util.Map;
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/UtilAdicionarProducto", 
+			name = "UtilAdicionarProducto", 
+			location = "/businessCatalog/ComponentesProcesos/UtilAdicionarProducto.xsd", 
+			module = "ComponentesProcesos") 
+public class UtilAdicionarProducto{
+
+UtilAdicionarProducto()
+{
+	/*
+	 * @NoMig: Type ComponentesProcesos.UtilAdicionarProducto.RequisitosSanitariosImpoFito[] cannot be migrated.
+	 */
+}
+
+
+public void anexosEncontradosValidValues()
+{
+	return this.resultadoBusquedaAnexo
+}
+
+
+public void departamentoOrigenValidValues()
+{
+	return this.methodDptoOrigenValues()
+}
+
+
+public void marcaDistintivaValidValues()
+{
+	return this.methodMarcaDistintivaValues()
+}
+
+
+public void methodDptoOrigenValues()
+{
+	Map<java.lang.String, java.lang.String> listResult
+	
+	return listResult
+}
+
+
+public void methodMarcaDistintivaValues()
+{
+	Map<java.lang.String, java.lang.String> listResult
+	
+	return listResult
+}
+
+
+public void methodPaisProcedenciaValues()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.Pais[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService cannot be migrated.
+	 */
+	 salida
+	GeografiaService servicio
+	servicio = GeografiaService.GeografiaService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService.obtenerPais(out return : ComponentesIntegracion.WebServices.GeografiaPortWSDL.Pais[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerPais(salida)
+	Map<java.lang.String, java.lang.String> listValues
+	for ( def item in salida) {
+		listValues[item.codPais] = item.pais
+	}
+	
+	return listValues
+}
+
+
+public void methodTipoEnvaseValues()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.TipoEnvase[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService cannot be migrated.
+	 */
+	 salida
+	ProductoService servicio
+	servicio = ProductoService.ProductoService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService.obtenerTipoEnvase(in arg0 : String, out return : ComponentesIntegracion.WebServices.ProductoPortWSDL.TipoEnvase[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerTipoEnvase('Fitosanitario', salida)
+	Map<java.lang.String, java.lang.String> listTipoEnvaseFitosanitario
+	for ( def item in salida) {
+		listTipoEnvaseFitosanitario[item.codTipoEnvase] = item.tipoEnvase
+	}
+	
+	return listTipoEnvaseFitosanitario
+}
+
+
+public void methodTipoEnvaseZooValues()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.TipoEnvase[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService cannot be migrated.
+	 */
+	 salida
+	ProductoService servicio
+	servicio = ProductoService.ProductoService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService.obtenerTipoEnvase(in arg0 : String, out return : ComponentesIntegracion.WebServices.ProductoPortWSDL.TipoEnvase[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerTipoEnvase('Zoosanitario', salida)
+	Map<java.lang.String, java.lang.String> listTipoEnvaseZoosanitario
+	for ( def item in salida) {
+		listTipoEnvaseZoosanitario[item.codTipoEnvase] = item.tipoEnvase
+	}
+	
+	return listTipoEnvaseZoosanitario
+}
+
+
+public void methodUnidadMedidaAnimal()
+{
+	
+}
+
+
+public void methodUnidadMedidaVegetal()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.UnidadMedida[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService cannot be migrated.
+	 */
+	 salida
+	ProductoService servicio
+	servicio = ProductoService.ProductoService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService.obtenerUnidadMedidaVegetal(out return : ComponentesIntegracion.WebServices.ProductoPortWSDL.UnidadMedida[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerUnidadMedidaVegetal(salida)
+	Map<java.lang.String, java.lang.String> lista
+	for ( def item in salida) {
+		lista[item.codUnidadMedida] = item.unidadMedida
+	}
+	
+	return lista
+}
+
+
+public void methodUsoDestinoValues()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.UsoDestino[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService cannot be migrated.
+	 */
+	 salida
+	ProductoService servicio
+	servicio = ProductoService.ProductoService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService.obtenerUsoDestino(in arg0 : String, out return : ComponentesIntegracion.WebServices.ProductoPortWSDL.UsoDestino[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerUsoDestino('Fitosanitario', salida)
+	Map<java.lang.String, java.lang.String> listValues
+	for ( def item in salida) {
+		listValues[item.codUsoDestino] = item.usoDestino
+	}
+	
+	return listValues
+}
+
+
+public void methodUsoDestinoZooValues()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.UsoDestino[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService cannot be migrated.
+	 */
+	 salida
+	ProductoService servicio
+	servicio = ProductoService.ProductoService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService.obtenerUsoDestino(in arg0 : String, out return : ComponentesIntegracion.WebServices.ProductoPortWSDL.UsoDestino[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerUsoDestino('Zoosanitario', salida)
+	Map<java.lang.String, java.lang.String> listValues
+	for ( def item in salida) {
+		listValues[item.codUsoDestino] = item.usoDestino
+	}
+	
+	return listValues
+}
+
+
+public void methodVariedadValues()
+{
+	Map<java.lang.String, java.lang.String> listResult
+	
+	return listResult
+}
+
+
+public void paisProcedenciaValidValues()
+{
+	return this.methodPaisProcedenciaValues()
+}
+
+
+public void productosEncontradosValidValues()
+{
+	return this.resultadoBusqueda
+}
+
+
+public java.util.List<java.lang.String> tipoBusquedaAnexoValidValues()
+{
+	return ['--Seleccionar--', 'Partida Arancelaria', 'Descripcion', 'Nombre Cientifico']
+}
+
+
+public java.util.List<java.lang.String> tipoBusquedaValidValues()
+{
+	return ['--Seleccionar--', 'Partida Arancelaria', 'Descripcion', 'Nombre Cientifico']
+}
+
+
+public void tipoEnvaseValidValues()
+{
+	return this.methodTipoEnvaseValues()
+}
+
+
+public void tipoEnvaseZooValidValues()
+{
+	return this.methodTipoEnvaseZooValues()
+}
+
+
+public void unidadMedidaVegetalValidValues()
+{
+	return this.methodUnidadMedidaVegetal()
+}
+
+
+public void usoDestinoValidValues()
+{
+	return this.methodUsoDestinoValues()
+}
+
+
+public void usoDestinoZooValidValues()
+{
+	return this.methodUsoDestinoZooValues()
+}
+
+
+public void variedadCultivarValidValues()
+{
+	return this.methodVariedadValues()
+}
+
+
+}

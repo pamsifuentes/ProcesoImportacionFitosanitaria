@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="12.1.3" build="00.00" fullName="ComponentesIntegracion.Bean.BpoServicioPago" modifiers="[public]"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoServicioPago" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/"  xmlns="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoServicioPago" >
+    <xs:complexType name="BpoServicioPagoType">
+        <xs:sequence>
+            <xs:element name="cantidadServicio" nillable="true" type="xs:double"/>
+            <xs:element name="codigoServicio" nillable="true" type="xs:string"/>
+            <xs:element name="montoAPagar" nillable="true" type="xs:double"/>
+            <xs:element name="nombreServicio" nillable="true" type="xs:string"/>
+            <xs:element name="nombreTipoServicio" nillable="true" type="xs:string"/>
+            <xs:element name="tipoServicio" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BpoServicioPago" type="BpoServicioPagoType"/>
+</xs:schema>

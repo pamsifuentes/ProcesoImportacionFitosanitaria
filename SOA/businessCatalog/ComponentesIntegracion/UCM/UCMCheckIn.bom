@@ -1,0 +1,59 @@
+//Content Format Version: 1.0
+
+//########################################################################################
+//####                                                                                ####
+//####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####
+//#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####
+//####                                                                                ####
+//########################################################################################
+package oracle.scripting.catalog.componentesIntegracion.ucm;
+
+import oracle.scripting.xml.com.stellent.checkin.type.IdcFile;
+import oracle.scripting.xml.com.stellent.checkin.type.IdcPropertyList;
+import oracle.scripting.xml.com.stellent.checkin.type.CheckInUniversalResult;
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/UCM/UCMCheckIn", 
+			name = "UCMCheckIn", 
+			location = "/businessCatalog/ComponentesIntegracion/UCM/UCMCheckIn.xsd", 
+			module = "ComponentesIntegracion.UCM") 
+public class UCMCheckIn{
+
+UCMCheckIn()
+{
+	
+}
+
+
+public java.lang.Boolean checkIn(byte[] pFileContent, 
+			java.lang.String pFileName, 
+			java.lang.String pDocTittle, 
+			java.lang.String pDocType, 
+			java.lang.String pDocAuthor, 
+			java.lang.String pSecurityGroup, 
+			java.lang.String pDocAccount)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.UCM.CheckIn.CheckInService cannot be migrated.
+	 */
+	IdcFile file = new IdcFile()
+	file.fileContent = pFileContent
+	file.fileName = pFileName
+	IdcPropertyList propiedades = new IdcPropertyList()
+	// WARNING: Both sides of the assignment must be either Types or Elements
+	propiedades.property = pArrIdcProperty
+	CheckInUniversalResult outCheckInUniversalResult
+	/*
+	 * @NoMig: The method ComponentesIntegracion.UCM.CheckIn.CheckInService.checkInUniversal(in dDocName : String, in dDocTitle : String, in dDocType : String, in dDocAuthor : String, in dSecurityGroup : String, in dDocAccount : String, in customDocMetaData : ComponentesIntegracion.UCM.CheckIn.IdcPropertyList, in primaryFile : ComponentesIntegracion.UCM.CheckIn.IdcFile, in alternateFile : ComponentesIntegracion.UCM.CheckIn.IdcFile, in extraProps : ComponentesIntegracion.UCM.CheckIn.IdcPropertyList, out checkInUniversalResult : ComponentesIntegracion.UCM.CheckIn.CheckInUniversalResult) has the following out arguments [checkInUniversalResult].
+	 * Out arguments semantics was not migrated.
+	 */
+	CheckInService.checkInUniversal('', pDocTittle, pDocType, pDocAuthor, pSecurityGroup, pDocAccount, propiedades, file, null, null, outCheckInUniversalResult)
+	// WARNING: 'message' method is deprecated.
+	// WARNING: Both sides of the assignment must be either Types or Elements
+	log.message('status message' + outCheckInUniversalResult.statusInfo.statusMessage, ScriptLogger.LogLevel.INFO)
+	
+	return true
+}
+
+
+}

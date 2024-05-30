@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="12.1.3" build="00.00" fullName="ComponentesIntegracion.Bean.BpoProducto" modifiers="[public]"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoProducto" elementFormDefault="qualified" xmlns="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoProducto"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="BpoProductoType">
+        <xs:sequence>
+            <xs:element name="cantidad" nillable="true" type="xs:string"/>
+            <xs:element name="codigoProducto" nillable="true" type="xs:string"/>
+            <xs:element name="idRegionOrigen" nillable="true" type="xs:string"/>
+            <xs:element name="idTipoEnvase" nillable="true" type="xs:string"/>
+            <xs:element name="idVariedad" nillable="true" type="xs:string"/>
+            <xs:element name="marcaDistintiva" nillable="true" type="xs:string"/>
+            <xs:element name="nombreCientifico" nillable="true" type="xs:string"/>
+            <xs:element name="nombreComun" nillable="true" type="xs:string"/>
+            <xs:element name="partidaArancelaria" nillable="true" type="xs:string"/>
+            <xs:element name="pesoNeto" nillable="true" type="xs:string"/>
+            <xs:element name="regionOrigen" nillable="true" type="xs:string"/>
+            <xs:element name="tipoEnvase" nillable="true" type="xs:string"/>
+            <xs:element name="variedad" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BpoProducto" type="BpoProductoType"/>
+</xs:schema>

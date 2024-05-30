@@ -1,0 +1,223 @@
+//Content Format Version: 1.0
+
+//########################################################################################
+//####                                                                                ####
+//####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####
+//#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####
+//####                                                                                ####
+//########################################################################################
+package oracle.scripting.catalog.componentesProcesos;
+
+import oracle.scripting.xml.pe.gob.senasa.ws.producto.type.Producto;
+import java.util.List;
+import oracle.scripting.catalog.componentesProcesos.ImportacionFitosanitaria;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import oracle.scripting.catalog.componentesProcesos.RequisitosImportacion;
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/Producto", 
+			name = "Producto", 
+			location = "/businessCatalog/ComponentesProcesos/Producto.xsd", 
+			module = "ComponentesProcesos") 
+public class Producto{
+
+Producto()
+{
+	/*
+	 * @NoMig: Type ComponentesProcesos.Producto.Anexos[] cannot be migrated.
+	 */
+}
+
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/Producto", 
+			name = "Producto", 
+			type = "X") 
+public oracle.scripting.catalog.componentesProcesos.Producto obtenerAnexo(java.lang.String argCodigoProducto)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService cannot be migrated.
+	 */
+	Producto salida
+	ProductoService servicio
+	servicio = ProductoService.ProductoService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService.obtenerAnexo(in arg0 : String, out return : ComponentesIntegracion.WebServices.ProductoPortWSDL.Producto) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerAnexo(argCodigoProducto, salida)
+	oracle.scripting.catalog.componentesProcesos.Producto anexo
+	anexo = oracle.scripting.catalog.componentesProcesos.Producto.newInstance()
+	anexo.codigoProducto = salida.codigoProducto
+	anexo.partidaArancelaria = salida.partidaArancelaria
+	anexo.descripcion = salida.descripcion
+	anexo.nombreCientifico = salida.nombreCientifico
+	anexo.contieneAnexos = salida.contieneAnexos
+	anexo.categoriaRiesgo = salida.categoriaRiesgo
+	
+	return anexo
+}
+
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/Producto", 
+			name = "Producto", 
+			type = "X", 
+			array_level = 1) 
+public java.util.List<oracle.scripting.catalog.componentesProcesos.Producto> obtenerAnexos(java.lang.String argTipoBusqueda, 
+			java.lang.String argTextoBusqueda, 
+			java.lang.String argCodigoProductoPadre)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.Producto[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService cannot be migrated.
+	 */
+	 salida
+	ProductoService servicio
+	servicio = ProductoService.ProductoService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService.obtenerAnexos(in arg0 : String, in arg1 : String, in arg2 : String, out return : ComponentesIntegracion.WebServices.ProductoPortWSDL.Producto[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerAnexos(argTipoBusqueda, argTextoBusqueda, argCodigoProductoPadre, salida)
+	List<oracle.scripting.catalog.componentesProcesos.Producto> productos
+	oracle.scripting.catalog.componentesProcesos.Producto producto
+	for ( def item in salida) {
+		producto = oracle.scripting.catalog.componentesProcesos.Producto.newInstance()
+		producto.codigoProducto = item.codigoProducto
+		producto.partidaArancelaria = item.partidaArancelaria
+		producto.descripcion = item.descripcion
+		producto.nombreCientifico = item.nombreCientifico
+		producto.contieneAnexos = item.contieneAnexos
+		producto.categoriaRiesgo = item.categoriaRiesgo
+		productos[] = producto
+	}
+	
+	return productos
+}
+
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/Producto", 
+			name = "Producto", 
+			type = "X") 
+public oracle.scripting.catalog.componentesProcesos.Producto obtenerProducto(java.lang.String argCodigoProducto)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService cannot be migrated.
+	 */
+	Producto salida
+	ProductoService servicio
+	servicio = ProductoService.ProductoService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService.obtenerProducto(in arg0 : String, out return : ComponentesIntegracion.WebServices.ProductoPortWSDL.Producto) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerProducto(argCodigoProducto, salida)
+	oracle.scripting.catalog.componentesProcesos.Producto producto
+	producto = oracle.scripting.catalog.componentesProcesos.Producto.newInstance()
+	producto.codigoProducto = salida.codigoProducto
+	producto.partidaArancelaria = salida.partidaArancelaria
+	producto.descripcion = salida.descripcion
+	producto.nombreCientifico = salida.nombreCientifico
+	producto.contieneAnexos = salida.contieneAnexos
+	producto.esAnimalVivo = salida.esAnimalVivo
+	producto.categoriaRiesgo = salida.categoriaRiesgo
+	producto.esCuarentenaPosentrada = salida.indicadorCuarentena
+	
+	return producto
+}
+
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/Producto", 
+			name = "Producto", 
+			type = "X", 
+			array_level = 1) 
+public java.util.List<oracle.scripting.catalog.componentesProcesos.Producto> obtenerProductos(java.lang.String argTipoBusqueda, 
+			java.lang.String argTextoBusqueda, 
+			java.lang.String argTipoProducto, 
+			java.lang.String argImpoExpo)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.Producto[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService cannot be migrated.
+	 */
+	 salida
+	ProductoService servicio
+	servicio = ProductoService.ProductoService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.ProductoPortWSDL.ProductoService.obtenerProductos(in arg0 : String, in arg1 : String, in arg2 : String, in arg3 : String, out return : ComponentesIntegracion.WebServices.ProductoPortWSDL.Producto[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerProductos(argTipoBusqueda, argTextoBusqueda, argTipoProducto, argImpoExpo, salida)
+	List<oracle.scripting.catalog.componentesProcesos.Producto> productos
+	oracle.scripting.catalog.componentesProcesos.Producto producto
+	for ( def item in salida) {
+		producto = oracle.scripting.catalog.componentesProcesos.Producto.newInstance()
+		producto.codigoProducto = item.codigoProducto
+		producto.partidaArancelaria = item.partidaArancelaria
+		producto.descripcion = item.descripcion
+		producto.nombreCientifico = item.nombreCientifico
+		producto.contieneAnexos = item.contieneAnexos
+		producto.categoriaRiesgo = item.categoriaRiesgo
+		producto.esCuarentenaPosentrada = item.indicadorCuarentena
+		productos[] = producto
+	}
+	
+	return productos
+}
+
+
+public void obtenerRequisitosProducto(java.lang.String argProducto, 
+			java.lang.String argAplicacion, 
+			java.lang.String argPaisProcedencia, 
+			java.lang.String argPaisOrigen, 
+			java.lang.String argLugarProduccion)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.PermisoFitosanitarioImportacionPortWSDL.RequisitoDao[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.PermisoFitosanitarioImportacionPortWSDL.PermisoFitosanitarioImportacionService cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesProcesos.ImportacionFitosanitaria.RequisitosFitosanitariosImpoFi[] cannot be migrated.
+	 */
+	ImportacionFitosanitaria requisito
+	 salida
+	BigInteger result
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI ===== OBTENER_REQUISITOS_PRODUCTO ====== ', ScriptLogger.LogLevel.INFO)
+	PermisoFitosanitarioImportacionService servicio
+	servicio = PermisoFitosanitarioImportacionService.PermisoFitosanitarioImportacionService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.PermisoFitosanitarioImportacionPortWSDL.PermisoFitosanitarioImportacionService.obtenerRequisitosSanitariosImpoFitoNew(in arg0 : String, in arg1 : String, in arg2 : String, in arg3 : String, in arg4 : String, out return : ComponentesIntegracion.WebServices.PermisoFitosanitarioImportacionPortWSDL.RequisitoDao[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerRequisitosSanitariosImpoFitoNew(argProducto, argAplicacion, argPaisProcedencia, argPaisOrigen, argLugarProduccion, salida)
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI -obtenerRequisitosProducto- cantidadRequisitosObtenidos: ' + salida.count(), ScriptLogger.LogLevel.INFO)
+	ArrayList listRequisitos
+	RequisitosImportacion reque = null
+	result = salida.count()
+	for ( def item in salida) {
+		reque = RequisitosImportacion.newInstance()
+		reque.requisitoFitosanitario = item.descripcionRequisito
+		reque.codigoRequisito = item.codigoRequisito
+		reque.etiqueta = item.etiqueta
+		reque.orden = item.orden
+		reque.sangria = item.sangria
+		
+		// requisito.requisitosFitosanitariosImpoFi.extend(requisitosImportacion : reque);
+		listRequisitos.add(reque)
+	}
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI -obtenerRequisitosProducto- requisitosFitosanitariosImpoFi.count()=' + requisito.requisitosFitosanitariosImpoFi.count(), ScriptLogger.LogLevel.INFO)
+	
+	return listRequisitos
+}
+
+
+}

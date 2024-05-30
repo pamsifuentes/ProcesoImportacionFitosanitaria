@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="12.1.3" build="00.00" fullName="ComponentesIntegracion.FlujoPantalla.BpoObtnrAgntAdn" modifiers="[public]"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/FlujoPantalla/BpoObtnrAgntAdn" elementFormDefault="qualified" xmlns:ns1="http://www.oracle.com/bpm/invalidTypes"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/FlujoPantalla/BpoObtnrAgntAdn"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="BpoObtnrAgntAdnType">
+        <xs:sequence>
+            <xs:element name="arrayImportadores" nillable="true" type="ns1:missingType"/>
+            <xs:element name="correoElectronico" nillable="true" type="xs:string"/>
+            <xs:element name="departamento" nillable="true" type="xs:string"/>
+            <xs:element name="distrito" nillable="true" type="xs:string"/>
+            <xs:element name="dniRepresentanteLegal" nillable="true" type="xs:string"/>
+            <xs:element name="domicilioLegal" nillable="true" type="xs:string"/>
+            <xs:element name="dtsEstd" nillable="true" type="xs:string"/>
+            <xs:element name="dtsEstdActvdd" nillable="true" type="xs:string"/>
+            <xs:element name="errorPantalla" nillable="true" type="xs:string"/>
+            <xs:element name="idAgenteAduana" nillable="true" type="xs:string"/>
+            <xs:element name="idImportador" nillable="true" type="xs:string"/>
+            <xs:element name="idPais" nillable="true" type="xs:string"/>
+            <xs:element name="lstImportadores" nillable="true" type="ns1:missingType"/>
+            <xs:element name="lstPais" nillable="true" type="ns1:missingType"/>
+            <xs:element name="nombreRepresentanteLegal" nillable="true" type="xs:string"/>
+            <xs:element name="provincia" nillable="true" type="xs:string"/>
+            <xs:element name="razonSocialNombre" nillable="true" type="xs:string"/>
+            <xs:element name="ruc" nillable="true" type="xs:string"/>
+            <xs:element name="telefono" nillable="true" type="xs:string"/>
+            <xs:element name="telefonoMovil" nillable="true" type="xs:string"/>
+            <xs:element name="urlMantenimientoAgenteAduana" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BpoObtnrAgntAdn" type="BpoObtnrAgntAdnType"/>
+</xs:schema>

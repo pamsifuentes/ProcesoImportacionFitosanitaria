@@ -1,0 +1,117 @@
+//Content Format Version: 1.0
+
+//########################################################################################
+//####                                                                                ####
+//####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####
+//#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####
+//####                                                                                ####
+//########################################################################################
+package oracle.scripting.catalog.componentesProcesos;
+
+import java.util.Map;
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/UtilLugaresProduccion", 
+			name = "UtilLugaresProduccion", 
+			location = "/businessCatalog/ComponentesProcesos/UtilLugaresProduccion.xsd", 
+			module = "ComponentesProcesos") 
+public class UtilLugaresProduccion{
+
+UtilLugaresProduccion()
+{
+	
+}
+
+
+public void departamentoValidValues()
+{
+	return this.methodDepartamentosValues()
+}
+
+
+public void distritoValidValues()
+{
+	return this.busquedaDistrito
+}
+
+
+public void methodDepartamentosValues()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.Departamento[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService cannot be migrated.
+	 */
+	 salida
+	GeografiaService servicio
+	servicio = GeografiaService.GeografiaService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService.obtenerDepartamentos(out return : ComponentesIntegracion.WebServices.GeografiaPortWSDL.Departamento[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerDepartamentos(salida)
+	Map<java.lang.String, java.lang.String> listValues
+	for ( def item in salida) {
+		listValues[item.codDepartamento] = item.departamento
+	}
+	
+	return listValues
+}
+
+
+public void obtenerDistritos(java.lang.String argProvincia, 
+			java.lang.String argDepartamento)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.Distrito[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService cannot be migrated.
+	 */
+	 salida
+	GeografiaService servicio
+	servicio = GeografiaService.GeografiaService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService.obtenerDistritos(in arg0 : String, in arg1 : String, out return : ComponentesIntegracion.WebServices.GeografiaPortWSDL.Distrito[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerDistritos(argProvincia, argDepartamento, salida)
+	Map<java.lang.String, java.lang.String> listValues
+	for ( def item in salida) {
+		listValues[item.codDistrito] = item.distrito
+	}
+	
+	return listValues
+}
+
+
+public void obtenerProvincias(java.lang.String argDepartamento)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.Provincia[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService cannot be migrated.
+	 */
+	 salida
+	GeografiaService servicio
+	servicio = GeografiaService.GeografiaService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService.obtenerProvincias(in arg0 : String, out return : ComponentesIntegracion.WebServices.GeografiaPortWSDL.Provincia[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerProvincias(argDepartamento, salida)
+	Map<java.lang.String, java.lang.String> listValues
+	for ( def item in salida) {
+		listValues[item.codProvincia] = item.provincia
+	}
+	
+	return listValues
+}
+
+
+public void provinciaValidValues()
+{
+	return this.busquedaProvincia
+}
+
+
+}

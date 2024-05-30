@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Actions xmlns="http://xmlns.oracle.com/bpm/analytics/measurementV20">
+    <compositeDN>ProcesoImportacionFitosanitaria</compositeDN>
+    <action name="BAMCommand" enabled="false">
+        <interfaceName>oracle.bpm.analytics.bam.action.BAMActionMDB</interfaceName>
+        <measurementElementName>ProcesoImportacionFitosanitaria</measurementElementName>
+    </action>
+    <action name="ProcessMetrics" enabled="true">
+        <interfaceName>oracle.bpm.analytics.beam.action.BeamActionMDB</interfaceName>
+        <measurementElementName>ProcesoImportacionFitosanitaria</measurementElementName>
+    </action>
+</Actions>

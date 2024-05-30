@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="12.1.3" build="00.00" fullName="ComponentesProcesos.UtilAdicionarProducto" modifiers="[public]"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/UtilAdicionarProducto" elementFormDefault="qualified" xmlns:ns1="http://www.oracle.com/bpm/invalidTypes"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/UtilAdicionarProducto"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="UtilAdicionarProductoType">
+        <xs:sequence>
+            <xs:element name="anexosEncontrados" nillable="true" type="xs:string"/>
+            <xs:element name="cantidad" nillable="true" type="xs:double"/>
+            <xs:element name="cantidadAnexo" nillable="true" type="xs:double"/>
+            <xs:element name="cantidadPlantas" nillable="true" type="xs:double"/>
+            <xs:element name="categoriaRiesgo" nillable="true" type="xs:string"/>
+            <xs:element name="codigo" nillable="true" type="xs:string"/>
+            <xs:element name="codigoPadre" nillable="true" type="xs:string"/>
+            <xs:element name="contieneAnexos" nillable="true" type="xs:boolean"/>
+            <xs:element name="departamentoOrigen" nillable="true" type="xs:string"/>
+            <xs:element name="descripcion" nillable="true" type="xs:string"/>
+            <xs:element name="descripcionPadre" nillable="true" type="xs:string"/>
+            <xs:element name="esCuarentenaPosentrada" nillable="true" type="xs:boolean"/>
+            <xs:element name="marcaDistintiva" nillable="true" type="xs:string"/>
+            <xs:element name="nombreCientifico" nillable="true" type="xs:string"/>
+            <xs:element name="nombreCientificoPadre" nillable="true" type="xs:string"/>
+            <xs:element name="paisProcedencia" nillable="true" type="xs:string"/>
+            <xs:element name="partidaArancelaria" nillable="true" type="xs:string"/>
+            <xs:element name="partidaArancelariaPadre" nillable="true" type="xs:string"/>
+            <xs:element name="pesoNeto" nillable="true" type="xs:double"/>
+            <xs:element name="pesoNetoAnexo" nillable="true" type="xs:double"/>
+            <xs:element name="planta" nillable="true" type="xs:string"/>
+            <xs:element name="productosEncontrados" nillable="true" type="xs:string"/>
+            <xs:element name="resultadoBusqueda" nillable="true" type="ns1:missingType"/>
+            <xs:element name="resultadoBusquedaAnexo" nillable="true" type="ns1:missingType"/>
+            <xs:element name="tipoBusqueda" default="--Seleccionar--" nillable="true" type="xs:string"/>
+            <xs:element name="tipoBusquedaAnexo" default="--Seleccionar--" type="xs:string"/>
+            <xs:element name="tipoEnvase" nillable="true" type="xs:string"/>
+            <xs:element name="tipoEnvaseZoo" nillable="true" type="xs:string"/>
+            <xs:element name="unidadMedidaAnimal" nillable="true" type="xs:string"/>
+            <xs:element name="unidadMedidaVegetal" nillable="true" type="xs:string"/>
+            <xs:element name="usoDestino" nillable="true" type="xs:string"/>
+            <xs:element name="usoDestinoZoo" nillable="true" type="xs:string"/>
+            <xs:element name="variedadCultivar" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="UtilAdicionarProducto" type="UtilAdicionarProductoType"/>
+</xs:schema>

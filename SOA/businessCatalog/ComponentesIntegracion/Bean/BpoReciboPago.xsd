@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="12.1.3" build="00.00" fullName="ComponentesIntegracion.Bean.BpoReciboPago" modifiers="[public]"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoReciboPago" elementFormDefault="qualified" xmlns:ns1="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoAgenteAduana"  xmlns="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoReciboPago"  xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns:ns2="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoPersona"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:import namespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoAgenteAduana" schemaLocation="BpoAgenteAduana.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/bpm/bpmobject/ComponentesIntegracion/Bean/BpoPersona" schemaLocation="BpoPersona.xsd"/>
+    <xs:complexType name="BpoReciboPagoType">
+        <xs:sequence>
+            <xs:element name="codigoProceso" nillable="true" type="xs:string"/>
+            <xs:element name="codigoRecibo" nillable="true" type="xs:string"/>
+            <xs:element name="dDocNameRecibo" nillable="true" type="xs:string"/>
+            <xs:element name="descripcionMensaje" nillable="true" type="xs:string"/>
+            <xs:element name="descripcionServicio" nillable="true" type="xs:string"/>
+            <xs:element name="esExpDefinitivo" nillable="true" type="xs:boolean"/>
+            <xs:element name="fechaRecibo" nillable="true" type="xs:string"/>
+            <xs:element name="nroSolicitud" nillable="true" type="xs:string"/>
+            <xs:element name="numeroExpediente" nillable="true" type="xs:string"/>
+            <xs:element name="numeroSolicitud" nillable="true" type="xs:string"/>
+            <xs:element name="objAgenteAduanas" nillable="true" type="ns1:BpoAgenteAduanaType"/>
+            <xs:element name="objSolicitante" nillable="true" type="ns2:BpoPersonaType"/>
+            <xs:element name="sede" nillable="true" type="xs:string"/>
+            <xs:element name="tiempoDeVida" nillable="true" type="xs:string"/>
+            <xs:element name="tipoMensaje" nillable="true" type="xs:string"/>
+            <xs:element name="urlRecibo" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BpoReciboPago" type="BpoReciboPagoType"/>
+</xs:schema>

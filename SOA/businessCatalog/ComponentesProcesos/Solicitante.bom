@@ -1,0 +1,268 @@
+//Content Format Version: 1.0
+
+//########################################################################################
+//####                                                                                ####
+//####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####
+//#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####
+//####                                                                                ####
+//########################################################################################
+package oracle.scripting.catalog.componentesProcesos;
+
+import java.util.Map;
+import java.lang.Double;
+import oracle.scripting.xml.pe.gob.senasa.ws.solicitante.type.Solicitante;
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/Solicitante", 
+			name = "Solicitante", 
+			location = "/businessCatalog/ComponentesProcesos/Solicitante.xsd", 
+			module = "ComponentesProcesos") 
+public class Solicitante{
+
+Solicitante()
+{
+	
+}
+
+
+public void departamentoValidValues()
+{
+	return this.methodDepartamentosValues()
+}
+
+
+public void distritoValidValues()
+{
+	return this.busquedaDistrito
+}
+
+
+public void envioNotificacion(java.lang.String argCertificado, 
+			java.lang.String argProceso, 
+			java.lang.String argServicioTupa, 
+			java.lang.String argSolicitante, 
+			java.lang.String argAsunto, 
+			java.lang.String argDestinatario, 
+			java.lang.String argURLDocumento)
+{
+	/*
+	 * @NoMig: Type Fuego.Net.Mail cannot be migrated.
+	 *
+	 * @NoMig: Type Fuego.Lib.Participant cannot be migrated.
+	 */
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI ===== METODO_ENVIO_NOTIFICACION =====', ScriptLogger.LogLevel.INFO)
+	/*
+	 * @NoMig: Method Fuego.Lang.Time.format(in mask : String) : String cannot be migrated.
+	 * Comments:
+	 * Comments (
+	 */
+	this.email = '<!DOCTYPE><html><head> ' + 
+	'<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />' + 
+	'</head>' + 
+	'<body>' + 
+	'<table width=\"100%\" border=\"1\">' + 
+	'<tr>' + 
+	'<td><p><strong>Servicio de Notificacion de Procesos del Negocio en SENASA:</strong></p>' + 
+	'<br />' + 'Fecha y Hora (registro):' + com.oracle.scripting.lib.xml.datatype.XmlCalendar.now().format('dd-MM-yyyy hh:mm') + 
+	'<br />' + 'Empresa :' + argSolicitante + 
+	'<br />' + 'Proceso :' + argProceso + 
+	'<br />' + 'Servicio TUPA:' + argServicioTupa + 
+	'<br />' + 'N° Certificado :' + argCertificado + 
+	'</td>' + 
+	'</tr>' + 
+	'</table>' + 
+	'</body>' + 
+	'</html>'
+	Mail eMail
+	eMail.contentType = 'text/html; charset=UTF-8'
+	eMail.from = 'notificacionbpm@senasa.gob.pe'
+	eMail.recipient = argDestinatario
+	eMail.subject = argAsunto
+	eMail.message = this.email
+	
+	// email
+	eMail.send()
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI NOTIFICACION email: ' + eMail.message, ScriptLogger.LogLevel.INFO)
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI NOTIFICACION Participant.email: ' + Participant.email, ScriptLogger.LogLevel.INFO)
+}
+
+
+public void methodDepartamentosValues()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.Departamento[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService cannot be migrated.
+	 */
+	 salida
+	GeografiaService servicio
+	servicio = GeografiaService.GeografiaService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService.obtenerDepartamentos(out return : ComponentesIntegracion.WebServices.GeografiaPortWSDL.Departamento[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerDepartamentos(salida)
+	Map<java.lang.String, java.lang.String> listValues
+	for ( def item in salida) {
+		listValues[item.codDepartamento] = item.departamento
+	}
+	
+	return listValues
+}
+
+
+public void methodTipoDocumentoValues()
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.SolicitantePortWSDL.TipoDocIden[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.SolicitantePortWSDL.SolicitanteService cannot be migrated.
+	 */
+	 salida
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI ===== MTD_OBTENER_TIPO_DOCUMENTOS =====', ScriptLogger.LogLevel.INFO)
+	SolicitanteService servicio
+	servicio = SolicitanteService.SolicitanteService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.SolicitantePortWSDL.SolicitanteService.obtenerTiposDocInden(out return : ComponentesIntegracion.WebServices.SolicitantePortWSDL.TipoDocIden[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerTiposDocInden(salida)
+	Map<java.lang.String, java.lang.String> ListValues
+	for ( def item in salida) {
+		ListValues[item.codigoTipoDoc] = item.nombreTipoDoc
+	}
+	// WARNING: 'message' method is deprecated.
+	log.message('PFI  mtdObtenerTipoDocumentos Fin', ScriptLogger.LogLevel.INFO)
+	
+	return ListValues
+}
+
+
+public void obtenerDistrito(java.lang.String argProvincia, 
+			java.lang.String argDepartamento)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.Distrito[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService cannot be migrated.
+	 */
+	 salida
+	GeografiaService servicio
+	servicio = GeografiaService.GeografiaService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService.obtenerDistritos(in arg0 : String, in arg1 : String, out return : ComponentesIntegracion.WebServices.GeografiaPortWSDL.Distrito[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerDistritos(argDepartamento, argProvincia, salida)
+	
+	return salida
+}
+
+
+public void obtenerProvincia(java.lang.String argDepartamento)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.Provincia[] cannot be migrated.
+	 *
+	 * @NoMig: Type ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService cannot be migrated.
+	 */
+	 salida
+	GeografiaService servicio
+	servicio = GeografiaService.GeografiaService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.GeografiaPortWSDL.GeografiaService.obtenerProvincias(in arg0 : String, out return : ComponentesIntegracion.WebServices.GeografiaPortWSDL.Provincia[]) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerProvincias(argDepartamento, salida)
+	
+	return salida
+}
+
+
+public java.lang.Double obtenerSaldoFavorSolicitante(java.lang.String argDniRucSolicitante)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.SolicitantePortWSDL.SolicitanteService cannot be migrated.
+	 */
+	Double salida
+	SolicitanteService servicio
+	servicio = SolicitanteService.SolicitanteService()
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.SolicitantePortWSDL.SolicitanteService.obtenerSaldoFavorSolicitante(in arg0 : String, out return : Real) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerSaldoFavorSolicitante(argDniRucSolicitante, salida)
+	
+	return salida
+}
+
+
+@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/Solicitante", 
+			name = "Solicitante", 
+			type = "X") 
+public oracle.scripting.catalog.componentesProcesos.Solicitante obtenerSolicitante(java.lang.String argDniRuc, 
+			java.lang.String argTipoDocumento, 
+			@com.oracle.scripting.lang.annotations.CatalogType(element = "E", 
+			namespace = "http://xmlns.oracle.com/bpm/bpmobject/ComponentesProcesos/Solicitante", 
+			name = "Solicitante", 
+			type = "X") 
+			oracle.scripting.catalog.componentesProcesos.Solicitante argSolicitanteOut)
+{
+	/*
+	 * @NoMig: Type ComponentesIntegracion.WebServices.SolicitantePortWSDL.SolicitanteService cannot be migrated.
+	 */
+	Solicitante salida
+	SolicitanteService servicio
+	servicio = SolicitanteService.SolicitanteService()
+	// WARNING: 'message' method is deprecated.
+	log.message('OCHAVEZ: ' + argDniRuc + ' / ' + argTipoDocumento, ScriptLogger.LogLevel.INFO)
+	/*
+	 * @NoMig: The method ComponentesIntegracion.WebServices.SolicitantePortWSDL.SolicitanteService.obtenerSolicitante(in arg0 : String, in arg1 : String, out return : ComponentesIntegracion.WebServices.SolicitantePortWSDL.Solicitante) has the following out arguments [return].
+	 * Out arguments semantics was not migrated.
+	 */
+	servicio.obtenerSolicitante(argTipoDocumento, argDniRuc, salida)
+	oracle.scripting.catalog.componentesProcesos.Solicitante solicitante
+	solicitante = Solicitante.newInstance()
+	
+	// solicitante.tipoDocumento = salida.tipoDocumento;
+	solicitante.codigo = salida.codigoSolicitante
+	solicitante.dniRuc = salida.dniRuc
+	solicitante.nombreRazonSocial = salida.nombreRazonSocial
+	solicitante.domicilioLegal = salida.domicilioLegal
+	solicitante.distrito = salida.distrito
+	solicitante.provincia = salida.provincia
+	solicitante.departamento = salida.departamento
+	solicitante.telefono = salida.telefono
+	
+	// solicitante.fax = salida.fax;
+	solicitante.email = salida.email
+	solicitante.dniRepresentanteLegal = salida.dniRepresentanteLegal
+	solicitante.nombreRepresentanteLegal = salida.nombreRepresentanteLegal
+	solicitante.nombreDepartamento = salida.nombreDepartamento
+	solicitante.nombreProvincia = salida.nombreProvincia
+	solicitante.nombreDistrito = salida.nombreDistrito
+	// WARNING: 'message' method is deprecated.
+	log.message('OCHAVEZ Asigna1: ' + solicitante.nombreDepartamento + ' / ' + solicitante.nombreProvincia + '/ ' + solicitante.nombreDistrito, ScriptLogger.LogLevel.INFO)
+	
+	return solicitante
+}
+
+
+public void provinciaValidValues()
+{
+	return this.busquedaProvincia
+}
+
+
+public void tipoDocumentoValidValues()
+{
+	return this.methodTipoDocumentoValues()
+}
+
+
+}
